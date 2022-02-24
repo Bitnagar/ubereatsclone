@@ -14,6 +14,7 @@
 html {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,7 +65,8 @@ header {
   height: 90px;
   padding: 32px;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
+  top: 0;
 }
 
 .ham-logo-div {
@@ -78,6 +80,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 200px;
+  cursor: pointer;
 }
 
 .sign-in-btn {
@@ -92,6 +95,117 @@ header {
 
 .sign-in-btn:hover {
   background-color: #dbdbdb;
+}
+
+/*--------OVERLAY-----------*/
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.493);
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: visibility 0.3s cubic-bezier(0, 0.52, 0, 1);
+  z-index: 1;
+}
+
+#overlay.show {
+  visibility: visible;
+}
+
+/*--------FLYOUT-MENU-----------*/
+#flyout-menu {
+  width: 15%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 25px;
+  background-color: white;
+  -webkit-transform: translate3d(-100vw, 0, 0);
+          transform: translate3d(-100vw, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1), -webkit-transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+#flyout-menu.show {
+  -webkit-transform: translate3d(0vw, 0, 0);
+          transform: translate3d(0vw, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1), -webkit-transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+}
+
+.upper-menu {
+  width: 100%;
+}
+
+.upper-menu > button {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 55px;
+  font-size: 18px;
+}
+
+.upper-menu > p {
+  font-size: 15px;
+  margin-top: 20px;
+  color: #747474;
+}
+
+.lower-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.lower-menu .lower-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.lower-menu .lower-upper > img {
+  width: 55px;
+  height: 55px;
+}
+
+.lower-menu .lower-lower button {
+  margin-right: 10px;
 }
 
 /*-------FIRST DIV--------*/

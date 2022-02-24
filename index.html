@@ -7,10 +7,29 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Uber Eats US | Food Delivery and Takeout | Order Online from Restaurants Near You</title>
 </head>
-<body>
+<body id="body">
+    <div id="overlay"></div>
+    <div id="flyout-menu">
+        <div class="upper-menu">
+            <button>Sign in</button>
+            <p>Create a business account</p>
+            <p>Add your restaruant</p>
+            <p>Sign up to deliver</p>
+        </div>
+        <div class="lower-menu">
+            <div class="lower-upper">
+                <img src="images\uberEatsBlackBgLogo.svg" alt="Uber Eats logo">
+                <p>There's more to love in the app</p>
+            </div>
+            <div class="lower-lower">
+                <button class="sign-in-btn">iPhone</button>
+                <button class="sign-in-btn">Android</button>
+            </div>
+        </div>
+    </div>
     <header class="header" id="myHeader">
         <div class="ham-logo-div">
-            <img src="images\ham.svg" alt="Hamburger Menu">
+            <img src="images\ham.svg" alt="Hamburger Menu" id="ham-icon">
             <img src="images\uberEatsBlack.svg" alt="Uber Eats Logo Black">
         </div>
         <button class="sign-in-btn">Sign in</button>
@@ -171,5 +190,6 @@
         </div>
     </footer>
    </main>
+   <script src="./js/index.js"></script>
 </body>
 </html>
