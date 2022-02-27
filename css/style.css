@@ -3,6 +3,22 @@
   src: url(../fonts/UberMoveMedium.otf);
 }
 
+/*---------DRY-------*/
+html, body, main, header #search, #overlay, .first-div {
+  width: 100%;
+  height: 100%;
+}
+
+body, #flyout-menu, .lower-menu, .second-div .locations, .second-div .locations .data-1-container, .second-div .locations .data-2-container, footer, footer .footer-main, footer .footer-main .upper .upper-left, footer .footer-main .lower .lowerRight .lower-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11,30 +27,11 @@
   font-family: Uber , sans-serif;
 }
 
-html {
-  width: 100%;
-  height: 100%;
-}
-
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/left-hero.svg), url(../images/right-hero.svg);
   background-position: top left, top right;
   background-repeat: no-repeat, no-repeat;
   background-color: #ffdada;
-}
-
-main {
-  width: 100%;
-  height: 100%;
 }
 
 input, a {
@@ -84,8 +81,6 @@ header .search-container::before {
 }
 
 header #search {
-  width: 100%;
-  height: 100%;
   background-color: #eeeeee;
   padding-left: 20px;
   font-size: 15px;
@@ -126,8 +121,6 @@ header #sign-in-header {
 
 /*--------OVERLAY-----------*/
 #overlay {
-  width: 100%;
-  height: 100%;
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.493);
@@ -144,13 +137,6 @@ header #sign-in-header {
   position: fixed;
   left: -15%;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -188,13 +174,6 @@ header #sign-in-header {
 }
 
 .lower-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -233,8 +212,6 @@ header #sign-in-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .first-div .first-div-content {
@@ -326,24 +303,7 @@ header #sign-in-header {
   letter-spacing: 2px;
 }
 
-.second-div .locations {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .second-div .locations .data-1-container, .second-div .locations .data-2-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   justify-items: center;
   margin-top: 100px;
 }
@@ -384,26 +344,12 @@ header #sign-in-header {
 
 /*--------FOOTER--------*/
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: black;
   padding: 80px 32px 32px 32px;
   height: 530px;
 }
 
 footer .footer-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: black;
 }
 
@@ -424,13 +370,6 @@ footer .footer-main .upper {
 }
 
 footer .footer-main .upper .upper-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -532,13 +471,6 @@ footer .footer-main .lower .lowerRight .lower-middle .lower-middle-para {
 }
 
 footer .footer-main .lower .lowerRight .lower-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

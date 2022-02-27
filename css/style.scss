@@ -3,6 +3,19 @@
     src: url(../fonts/UberMoveMedium.otf);
 }
 
+/*---------DRY-------*/
+%w-h-100 {
+    width: 100%;
+    height: 100%;
+}
+
+%flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+//------ (～￣▽￣)～) ---------//
+
 * {
     padding: 0;
     margin: 0;
@@ -11,15 +24,12 @@
 }
 
 html {
-    width: 100%;
-    height: 100%;
+    @extend %w-h-100;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+    @extend %w-h-100;
+    @extend %flex-col;
     background-image: url(../images/left-hero.svg), url(../images/right-hero.svg);
     background-position: top left, top right;
     background-repeat: no-repeat, no-repeat;
@@ -27,8 +37,7 @@ body {
 }
 
 main {
-    width: 100%;
-    height: 100%;
+    @extend %w-h-100;
 }
 
 input, a {
@@ -72,8 +81,7 @@ header {
     }
 
     #search {
-        width: 100%;
-        height: 100%;
+        @extend %w-h-100;
         background-color: rgb(238, 238, 238);
         padding-left: 20px;
         font-size: 15px;
@@ -109,8 +117,7 @@ header {
 
 /*--------OVERLAY-----------*/
 #overlay {
-    width: 100%;
-    height: 100%;
+    @extend %w-h-100;
     position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, 0.493);
@@ -128,8 +135,7 @@ header {
     left: -15%;
     top: 0;
 
-    display: flex;
-    flex-direction: column;
+    @extend %flex-col;
     justify-content: space-between;
     align-items: flex-start;
 
@@ -164,8 +170,7 @@ header {
 }
 
 .lower-menu {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-col;
     margin-bottom: 20px;
 
     .lower-upper {
@@ -194,8 +199,7 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    @extend %w-h-100;
 
     .first-div-content {
         padding: 0 40px 0 40px;
@@ -277,12 +281,10 @@ header {
     }
 
     .locations {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-col;
 
         .data-1-container, .data-2-container{
-            display: flex;
-            flex-direction: column;
+            @extend %flex-col;
             justify-items: center;
             margin-top: 100px;
         }
@@ -316,15 +318,13 @@ header {
 /*--------FOOTER--------*/
 
 footer {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-col;
     background-color: black;
     padding: 80px 32px 32px 32px;
     height: 530px;
 
     .footer-main {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-col;
         background-color: black;
 
         .upper {
@@ -334,8 +334,7 @@ footer {
             align-items: center;
 
             .upper-left {
-                display: flex;
-                flex-direction: column;
+                @extend %flex-col;
                 justify-content: center;
                 height: 100%;
                 gap: 120px;
@@ -408,8 +407,7 @@ footer {
                 }
 
                 .lower-right {
-                    display: flex;
-                    flex-direction: column;
+                    @extend %flex-col;
                     justify-content: space-between;
                 }
             }
