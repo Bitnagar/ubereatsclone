@@ -27,8 +27,6 @@ body {
 }
 
 main {
-    // display: flex;
-    // flex-direction: column;
     width: 100%;
     height: 100%;
 }
@@ -72,7 +70,7 @@ header {
         position: absolute;
         background-color: rgb(255, 0, 0);
     }
-    
+
     #search {
         width: 100%;
         height: 100%;
@@ -251,6 +249,7 @@ header {
     background-color: white;
 }
 
+/*--------SECOND DIV--------*/
 .second-div {
     background-color: white;
     padding: 32px;
